@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   <style>
+     body
+        {
+            width:100%;
+            height:600px;
+            background-color:#DAC0A3;
+
+        }
+        .container1
+        {
+            background-color:#102C57;
+            width:100%;
+            height:150px;
+            display:block;
+           position:absolute;
+           top:0%;
+           left:0%;
+        
+        
+
+           
+        }
+        a{
+            color:white;
+            font-family:Berlin Sans FB Demi;
+            font-size:2vw;
+            text-decoration: none;
+        }
+        /*a:hover{
+            text-decoration: underline;
+            background-color:white;
+            color:black;
+        }*/
+        a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+        
+        #home
+        {
+            position:absolute;
+            top:20%;
+            left:30%;
+        }
+        #about{
+        position:absolute;
+        top:20%;
+        left:47%;
+     }
+        #login
+        {
+            position:absolute;
+            top:20%;
+            left:65%;
+        }
+        #calculate
+        {
+            position:absolute;
+            top:20%;
+            left:80%;
+        }
+        #img1
+        {
+            width:100%;
+            height:650px;
+            position:absolute;
+            top:13.9%;
+            left:0%;
+
+        }
+        #count1
+        {
+            background-color:rgb(232, 223, 202,0.4);
+            width:35%;
+            height:400px;
+            position:absolute;
+            top:25%;
+            left:32%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #para1
+        {
+            color:black;
+            font-size:3vw;
+            position:absolute;
+            top:-10%;
+            left:38%;
+            font-weight: 600;
+            animation: flash 0.5s infinite;
+        }
+        @keyframes flash {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    #para2
+    {
+        font-family:Britannic Bold;
+        font-size:2vw;
+        color:black;
+        position:absolute;
+        top:18%;
+        left:32%;
+    }
+    #usname2
+    {
+       
+    
+        position:absolute;
+        top:38%;
+        left:32%;
+        width:40%;
+    
+    }
+    input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    }
+    input[type=password] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    }
+    #para3
+    {
+        font-family:Britannic Bold;
+        font-size:2vw;
+        color:black;
+        position:absolute;
+        top:42%;
+        left:32%;
+    }
+    #pass2
+    {
+        position:absolute;
+        top:65%;
+        left:32%;
+        width:40%;
+    }
+    #log
+    {
+        position:absolute;
+        top:80%;
+        left:45%;
+        width:15%;
+        height:45px;
+        border-radius:25px;
+        background-color:#102C57;
+    }
+    #error1
+    {
+        position:absolute;
+        top:40%;
+        left:32%
+    }
+    #error2
+    {
+        position:absolute;
+        top:68%;
+        left:32%
+    }
+    #sig
+            {
+                position:absolute;
+                top:83%;
+                left:68%;
+                 font-size:1.5vw;
+                 color:black;
+            }
+            footer
+            {
+                background-color:#102C57;
+                position:absolute;
+                width:100%;
+                height:250px;
+                top:115%;
+                left:0%;
+            }
+            #f1
+            {
+                position:absolute;
+                top:18%;
+                left:39%;
+            }
+            #f2
+            {
+                position:absolute;
+                top:20%;
+                left:45%;
+            }
+            #f3
+            {
+                position:absolute;
+                top:22%;
+                left:50%;
+            }
+            #f4
+            {
+                position:absolute;
+                top:49%;
+                left:35%;
+            }
+            #f5
+            {
+                position:absolute;
+                top:45%;
+                left:50%;
+            }
+             #f6
+            {
+                position:absolute;
+                top:52%;
+                left:38%;
+                color:white;
+            }
+            #f7
+            {
+                position:absolute;
+                top:52%;
+                left:55%;
+                color:white;
+            }
+            #f8
+            {
+                position:absolute;
+                top:62%;
+                left:36%;
+                color:white;
+                width:22%;
+                height:110px;
+            }
+    </style>
+    <script src='log.js'></script>
+</head>
+<body>
+    <header class="container1">
+        <a  href="home.html" id="home">Home</a>
+       <a href="#" id="about">About Us</a>
+        <a href="#" id="login">Login</a>
+        <a href="calculate.html" id="calculate">Calculate</a>
+    </header>
+    <section class="container2">
+        <img src="sec2.jpg" id="img1">
+        <div id="count1">
+            <form name="frm3">
+            <p id="para1">LOGIN</p>
+            <p id="para2">Username:</p>
+            <input type="text" id="usname2" onchange="usVal()" pattern="^[A-Za-z]*" required>
+            <p id="error1"> </p>
+            <p id="para3">Password:</p>
+            <input type="password" id="pass2" onchange="passVal()" pattern="[A-Za-z0-9@]{5,12}" required>
+            <p id="error2"> </p>
+            <input type="submit" value="Login" id="log" onclick="frmVal()">
+            <nav> <a href="signup.html" id="sig">sign-in?</a></nav>
+            </form>
+        </div>
+        <footer>
+            <img src="fb.png" width="6%" height="65px" id="f1">
+            <img src="twt.png" width="5%" height="60px" id="f2">
+            <img src="insta.png" width="6%" height="50px" id="f3">
+            <img src="ph.png" width="3%" height="40px" id="f4"><label id="f6">+863-768-5906</label>
+            <img src="ml2.png" width="4%" height="55px" id="f5"><label id="f7">mortagecal@gmail.com</label><br>
+        </footer>
+            
+        </section>
+        </body>
+</html>

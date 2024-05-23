@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body
+        {
+            width:100%;
+            height:1450px;
+            background-color:#DAC0A3;
+
+        }
+        .container1
+        {
+            background-color:#102C57;
+            width:100%;
+            height:150px;
+            display:block;
+           position:absolute;
+           top:0%;
+           left:0%;
+        
+        
+
+           
+        }
+        a{
+            color:white;
+            font-family:Berlin Sans FB Demi;
+            font-size:2vw;
+            text-decoration: none;
+        }
+        /*a:hover{
+            text-decoration: underline;
+            background-color:white;
+            color:black;
+        }*/
+        a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+        
+        #home
+        {
+            position:absolute;
+            top:20%;
+            left:30%;
+        }
+        #about{
+        position:absolute;
+        top:20%;
+        left:47%;
+     }
+        #login
+        {
+            position:absolute;
+            top:20%;
+            left:65%;
+        }
+        #calculate
+        {
+            position:absolute;
+            top:20%;
+            left:80%;
+        }
+        #img1
+        {
+            width:100%;
+            height:500px;
+            position:absolute;
+            top:13.9%;
+            left:0%;
+
+        }
+        #count1
+        {
+            background-color:rgba(112,112,112,0.5);
+            width:100%;
+            height:500px;
+            position:absolute;
+            top:13.7%;
+            left:0%;
+        }
+        #para1
+        {
+            color:black;
+            font-family:Arial Narrow;
+            font-size:4vw;
+            position:absolute;
+            left:7%;
+            top:10%;
+        animation: animate  
+
+                1.5s linear infinite; 
+
+        } 
+
+  
+
+        @keyframes animate { 
+
+            0% { 
+
+                opacity: 0; 
+
+            } 
+
+  
+
+            50% { 
+
+                opacity: 0.7; 
+
+            } 
+
+  
+
+            100% { 
+
+                opacity: 0; 
+
+               }
+
+        }
+#sec2
+{
+    width:25%;
+    height:350px;
+    background-color:#113946;
+    position:absolute;
+    top:100%;
+    left:5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.img2
+{
+    width:40%;
+    height:115px;
+    position:absolute;
+    top:5%;
+    left:30%;
+}
+#sec3
+{
+    width:25%;
+    height:350px;
+    background-color:#113946;
+    position:absolute;
+    top:100%;
+    left:38%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+#sec4
+{
+    width:25%;
+    height:350px;
+    background-color:#113946;
+    position:absolute;
+    top:100%;
+    left:70%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.para2
+{
+    font-family:Berlin Sans FB Demi;
+    font-size:2vw;
+    color:white;
+    position:absolute;
+    top:33%;
+    left: 15%;
+}
+.para3
+{
+    position:absolute;
+    top:60%;
+    left:15%;
+    font-size:1.3vw;
+    color:white;
+    width:80%;
+    
+}
+.para4
+{
+    font-family:Berlin Sans FB Demi;
+    font-size:2vw;
+    color:white;
+    position:absolute;
+    top:33%;
+    left: 25%;
+}
+.para5
+{
+    position:absolute;
+    top:60%;
+    left:10%;
+    font-size:1.3vw;
+    color:white;
+    width:80%;
+    
+}
+.para6
+{
+    font-family:Berlin Sans FB Demi;
+    font-size:2vw;
+    color:white;
+    position:absolute;
+    top:33%;
+    left: 16%;
+}
+.para7
+{
+    position:absolute;
+    top:60%;
+    left:10%;
+    font-size:1.3vw;
+    color:white;
+    width:80%;
+    
+}
+footer
+            {
+                background-color:#102C57;
+                position:absolute;
+                width:100%;
+                height:250px;
+                top:165%;
+                left:0%;
+            }
+            #f1
+            {
+                position:absolute;
+                top:18%;
+                left:39%;
+            }
+            #f2
+            {
+                position:absolute;
+                top:20%;
+                left:45%;
+            }
+            #f3
+            {
+                position:absolute;
+                top:22%;
+                left:50%;
+            }
+            #f4
+            {
+                position:absolute;
+                top:49%;
+                left:35%;
+            }
+            #f5
+            {
+                position:absolute;
+                top:45%;
+                left:50%;
+            }
+             #f6
+            {
+                position:absolute;
+                top:52%;
+                left:38%;
+                color:white;
+            }
+            #f7
+            {
+                position:absolute;
+                top:52%;
+                left:55%;
+                color:white;
+            }
+            #f8
+            {
+                position:absolute;
+                top:62%;
+                left:36%;
+                color:white;
+                width:22%;
+                height:110px;
+            }
+
+        
+        </style>
+</head>
+<body>
+<header class="container1">
+    <a  href="#" id="home">Home</a>
+   <a href="#" id="about">About Us</a>
+    <a href="login.html" id="login">Login</a>
+    <a href="calculate.html" id="calculate">Calculate</a>
+</header>
+<section class="container2">
+    
+<img src="section2.jpg" id="img1">
+<div id="count1">
+    <p id="para1"><b>Your home ownership journey begins<br>with the right calculation</b></p>
+    </div>
+    </section>
+    <section id="sec2">
+        <img src="file.png" class="img2">
+        <p class="para2">
+            <b>Make It Your Dream</b>
+            </p>
+            <p class="para3">
+               <b> With every mortgage payment, you're not just paying down debt; you're investing in a place to call your own
+            </b>    
+            </p>
+        </section>
+        <section id="sec3">
+            <img src="file3.png" class="img2">
+            <p class="para4">
+              <b>Create A Place</b>
+                </p>
+                <p class="para5"><b>A mortgage transforms a house into a home, turning four walls into a place of warmth and love.</b></p>
+            </section>
+            <section id="sec4">
+                <img src="file4.png" class="img2">
+                <p class="para6"><b>Join To Local Affairs</b></p>
+            <p class="para7"><b>The beauty of a mortgage is that it's a step-by-step journey towards full ownership and independence.</b></p>    
+            </section>
+            <footer>
+                <img src="fb.png" width="6%" height="65px" id="f1">
+                <img src="twt.png" width="5%" height="60px" id="f2">
+                <img src="insta.png" width="6%" height="50px" id="f3">
+                <img src="ph.png" width="3%" height="40px" id="f4"><label id="f6">+863-768-5906</label>
+                <img src="ml2.png" width="4%" height="55px" id="f5"><label id="f7">mortagecal@gmail.com</label><br>
+            </footer>
+
+</body>
+</html>
