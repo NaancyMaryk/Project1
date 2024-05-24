@@ -10,6 +10,7 @@ import insta from './insta.png'
 import ph from './ph.png'
 import ml2 from './ml2.png'
 import logo from './logo.png'
+import imgg from './imgg.jpeg'
 
 
 export const About = () =>
@@ -37,7 +38,7 @@ export const About = () =>
                 <img src={img6} className='w-full h-[650px] absolute top-[17%] opacity-70'></img>
             <img src={img2} className='w-[60%] h-[650px] absolute top-[17%] left-[60%]' ></img>
             <div className='bg-[#1E3A8A] opacity-70 w-[25%] h-[350px] absolute top-[35%] left-[40%]'></div>
-            <img src={img3} className=' w-[30%] h-[350px] absolute top-[45%] left-[30%]'></img>
+            <img src={imgg} className=' w-[30%] h-[350px] absolute top-[45%] left-[30%]'></img>
             <p className='text-6xl  text-[#4C0519] absolute top-[45%] left-[5%]  underline underline-offset-8'><b>Making </b></p>
                 <p className='text-6xl text-[#4C0519] absolute top-[58%] left-[5%] underline underline-offset-8 '><b>Mortgage</b></p>
                     <p className='text-6xl text-[#4C0519] absolute top-[70%] left-[1%] underline underline-offset-8 '><b> math a breeze!</b></p>
