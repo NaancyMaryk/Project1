@@ -59,6 +59,52 @@ export const Login = () =>
                                     return errors;
 
                     };
+
+                    useEffect(() => {
+    
+                        const existingScript = document.querySelector(`script[src="//js.hsforms.net/forms/embed/v2.js"]`);
+                    
+                        if (!existingScript) {
+                          const script = document.createElement('script');
+                          script.src = '//js.hsforms.net/forms/embed/v2.js';
+                          script.type = 'text/javascript';
+                          script.charset = 'utf-8';
+                          script.async = true;
+                    
+                          script.onload = () => {
+                            if (window.hbspt) {
+                              window.hbspt.forms.create({
+                                region: 'na1',
+                                portalId: '46242532',
+                                formId: '61fb2247-22c9-43f1-8466-2f2cfb4ff0be',
+                                target: '#hubspotForm'
+                              });
+                            }
+                          };
+                    
+                          document.body.appendChild(script);
+                        } else {
+                          // Script already exists, just create the form
+                          if (window.hbspt) {
+                            window.hbspt.forms.create({
+                              region: 'na1',
+                              portalId: '46242532',
+                              formId: '61fb2247-22c9-43f1-8466-2f2cfb4ff0be',
+                              target: '#hubspotForm'
+                            });
+                          }
+                        }
+                    
+                        // Cleanup function
+                        return () => {
+                          const formContainer = document.querySelector('#hubspotForm');
+                          if (formContainer) {
+                            formContainer.innerHTML = '';
+                          }
+                        };
+                      }, []);
+
+
         return(
             <div className= "bg-[#DAC0A3] w-full h-[1130px]">
             <div className="bg-[#102C57] w-[100%] h-[125px]  absolute  left-[0%] flex justify-center">
@@ -104,20 +150,12 @@ export const Login = () =>
             font-mono
             font-extrabold
             animate-bounce'>Login:</p>
-            <form onSubmit={handleSubmit}>
-            <label className='text-black absolute top-[28%] 
-            left-[20%] text-3xl'><b>UserName:</b></label>
-            <input type="text" className='absolute top-[40%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black ' id='usname' name='username' values={formValues.username} onChange={handleChange}/>
-            <p className='text-[#ef4444] absolute top-[46%] left-[20%] text-2xl'>{formErrors.username}</p>
-            <label className='text-black absolute top-[55%] 
-            left-[20%] text-3xl'><b>Password:</b></label>
-                        <input type="password" className='absolute top-[65%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black' id='passwrd' name='password' values={formValues.password} onChange={handleChange} />
-                        <p className='text-[#ef4444] absolute top-[72%] left-[20%] text-2xl'>{formErrors.password}</p>
+            
+                        <Link className='underline decoration-2 text-2xl absolute top-[10%] left-[70%]' to="/Signup"><b>Signup?</b></Link>
 
-                        <button className='bg-[#102C57] text-white w-[20%] absolute top-[85%] left-[40%] rounded-xl h-[9%]' >Submit</button>
-                        <Link className='underline decoration-2 text-2xl absolute top-[80%] left-[70%]' to="/Signup"><b>Signup?</b></Link>
+                        <div id="hubspotForm" className='absolute top-[28%] left-[28%]'>
 
-            </form>
+</div>
             </div>
 
 

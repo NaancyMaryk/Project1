@@ -84,6 +84,49 @@ export const Signup = () =>
                                     return errors;
 
                     };
+                    useEffect(() => {
+    
+                        const existingScript = document.querySelector(`script[src="//js.hsforms.net/forms/embed/v2.js"]`);
+                    
+                        if (!existingScript) {
+                          const script = document.createElement('script');
+                          script.src = '//js.hsforms.net/forms/embed/v2.js';
+                          script.type = 'text/javascript';
+                          script.charset = 'utf-8';
+                          script.async = true;
+                    
+                          script.onload = () => {
+                            if (window.hbspt) {
+                              window.hbspt.forms.create({
+                                region: 'na1',
+                                portalId: '46242532',
+                                formId: 'd5464e99-9b95-49df-8d84-f8fc81ec0530',
+                                target: '#hubspotForm'
+                              });
+                            }
+                          };
+                    
+                          document.body.appendChild(script);
+                        } else {
+                          // Script already exists, just create the form
+                          if (window.hbspt) {
+                            window.hbspt.forms.create({
+                              region: 'na1',
+                              portalId: '46242532',
+                              formId: 'd5464e99-9b95-49df-8d84-f8fc81ec0530',
+                              target: '#hubspotForm'
+                            });
+                          }
+                        }
+                    
+                        // Cleanup function
+                        return () => {
+                          const formContainer = document.querySelector('#hubspotForm');
+                          if (formContainer) {
+                            formContainer.innerHTML = '';
+                          }
+                        };
+                      }, []);
 
     
         return(
@@ -133,30 +176,9 @@ export const Signup = () =>
             font-mono
             font-extrabold
             animate-bounce'>SignUp:</p>
-            <form onSubmit={handleSubmit}>
-                <label className='text-black absolute top-[18%] 
-            left-[20%] text-3xl'><b>UserName:</b></label>
-         <input type="text" className='absolute top-[26%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black ' id='usname2' name='username' values={formValues.username} onChange={handleChange}/>
-           <p className='text-[#ef4444] absolute top-[30%] left-[20%] text-2xl'>{formErrors.username}</p>
-            <label className='text-black absolute top-[37%] 
-            left-[20%] text-3xl'><b>Email:</b></label>
-      <input type="email" className='absolute top-[46%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black ' id='email' name='email' values={formValues.email} onChange={handleChange}/>
-      <p className='text-[#ef4444] absolute top-[50%] left-[20%] text-2xl'>{formErrors.email}</p>
+           <div id="hubspotForm" className='absolute top-[20%] left-[35%]'>
 
-      <label className='text-black absolute top-[55%] 
-            left-[20%] text-3xl'><b>Password:</b></label>
-       <input type="password" className='absolute top-[63%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black ' id='pass2' name='password' values={formValues.password} onChange={handleChange}/>
-       <p className='text-[#ef4444] absolute top-[67%] left-[20%] text-2xl'>{formErrors.password}</p>
-
-       <label className='text-black absolute top-[72%] 
-            left-[20%] text-3xl'><b>Confirm Password:</b></label>
-           <input type="password" className='absolute top-[80%] left-[20%] text-black  w-[60%] bg-transparent border-b-2 border-black ' id='conpass' name='pass2' values={formValues.pass2} onChange={handleChange}/>
-           <p className='text-[#ef4444] absolute top-[84%] left-[20%] text-2xl'>{formErrors.pass2}</p>
-
-           <button type="submit" className='bg-[#102C57] text-white w-[15%] absolute top-[91%] left-[40%] rounded-xl h-[8%]' >Submit</button>
-
-
-            </form>
+    </div>
 
                 </div>
                 </section>
