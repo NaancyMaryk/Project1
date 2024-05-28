@@ -1,7 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import React from 'react'
 import img2 from './img2.jpg'
-import img3 from './img3.jpg'
 import img6 from './img6.avif'
 import img7 from './img7.webp'
 import fb from './fb.png'
@@ -17,9 +16,9 @@ export const About = () =>
     {
         return(
             <>
-            <div className= "bg-[#DAC0A3] w-full h-[1400px]">
+            <div className= "bg-[#DAC0A3] w-full h-[1600px]">
                 <div className="bg-[#102C57] w-[100%] h-[125px]  absolute  left-[0%] flex justify-center">
-                <img src={logo} className='absolute left-[2%] w-[10%] h-[130px]'/>
+                <img src={logo} className='absolute left-[2%] w-[12%] h-[130px]'/>
 
             <Link className="font-mono
              text-white 
@@ -56,11 +55,28 @@ export const About = () =>
                        hover:opacity-75 transform  
                        hover:-translate-y-1 hover:scale-110 '></img>
             <p className='text-white w-[24%] h-[250px] absolute top-[118%] left-[72%] text-1xl'>At Mortgage Mastery, we are committed to transparency, accuracy, and customer empowerment. We believe that everyone deserves access to reliable financial tools and information, which is why we continually strive to enhance our platform and expand our offerings. Your journey to homeownership is our priority, and we are here to support you every step of the way.</p>
+           <div className='font-mono text-black font-extrabold text-4xl absolute top-[160%] left-[5%]'>Interest Rates Over The Years</div>
+            <div className='absolute top-[170%]'>
+        <iframe src='https://flo.uri.sh/visualisation/18145822/embed' 
+        title='Interactive or visual content' 
+        class='flourish-embed-iframe' 
+        frameborder='0' scrolling='no' style={{ marginLeft:'55%',  width:'300%', height:'1000px;'}} 
+        sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'>
+        </iframe>
+        <div style={{width:'100%', height:'100px', marginTop:'4px', textAlign:'right'}}>
+        <a class='flourish-credit' 
+        href='https://public.flourish.studio/visualisation/18145822/?utm_source=embed&utm_campaign=visualisation/18145822' 
+        target='_top' style={{textDecoration:'none'}}>
+        <img alt='Made with Flourish' 
+        src='https://public.flourish.studio/resources/made_with_flourish.svg' 
+        style={{width:'90%', height:'50%', border:'none', margin:'0'}} /> 
+        </a></div>
+    </div>
             <footer className="bg-[#102C57]
                 absolute
                 w-[100%]
-                h-[250px]
-                top-[165%]">
+                h-[200px]
+                top-[200%]">
         <img src={fb} className="w-[6%] h-[65px] absolute
                 top-[18%]
                 left-[39%]" ></img>
@@ -92,3 +108,8 @@ export const About = () =>
             </>
         );
     }
+
+
+
+
+    

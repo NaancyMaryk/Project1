@@ -55,7 +55,7 @@ export const Calculate = () =>
         return(
             <div className= "bg-[#DAC0A3] w-full h-[1130px]">
             <div className="bg-[#102C57] w-[100%] h-[125px]  absolute  left-[0%] flex justify-center">
-            <img src={logo} className='absolute left-[2%] w-[10%] h-[130px]'/>
+            <img src={logo} className='absolute left-[2%] w-[12%] h-[130px]'/>
 
         <Link className="font-mono
          text-white 

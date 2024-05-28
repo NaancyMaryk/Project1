@@ -134,7 +134,7 @@ export const Signup = () =>
            
             <div className= "bg-[#DAC0A3] w-full h-[1130px]">
             <div className="bg-[#102C57] w-[100%] h-[125px]  absolute  left-[0%] flex justify-center">
-            <img src={logo} className='absolute left-[2%] w-[10%] h-[130px]'/>
+            <img src={logo} className='absolute left-[2%] w-[12%] h-[130px]'/>
 
         <Link className="font-mono
          text-white 
@@ -176,7 +176,12 @@ export const Signup = () =>
             font-mono
             font-extrabold
             animate-bounce'>SignUp:</p>
+                       <Link className='underline decoration-2 text-2xl absolute
+            top-[90%]
+            left-[80%]' to="/Admin"><b>Admin?</b></Link>
+
            <div id="hubspotForm" className='absolute top-[20%] left-[35%]'>
+
 
     </div>
 
