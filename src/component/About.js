@@ -60,7 +60,7 @@ export const About = () =>
         <iframe src='https://flo.uri.sh/visualisation/18145822/embed' 
         title='Interactive or visual content' 
         class='flourish-embed-iframe' 
-        frameborder='0' scrolling='no' style={{ marginLeft:'55%',  width:'300%', height:'1000px;'}} 
+        frameborder='0' scrolling='no' style={{ marginLeft:'55%',  width:'300%', height:'300vh;'}} 
         sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'>
         </iframe>
         <div style={{width:'100%', height:'100px', marginTop:'4px', textAlign:'right'}}>

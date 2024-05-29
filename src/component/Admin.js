@@ -37,7 +37,7 @@ export const Admin= () =>
                         
                         if(values.adminname==="Naancy"&&values.apassword==="1810")
                             {
-                                window.location.href="http://localhost:3000/Algo"
+                                window.location.href="http://localhost:63734/Algo"
                             }
                             else
                             {
